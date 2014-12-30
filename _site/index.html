@@ -1,44 +1,83 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Ramblings of an Icoherent Mind</title>
-<meta name="author" content="Jens Erik Eriksson" />
-<link href="http://fwww.erixoneriksson.com" rel="alternate" title="Jens Erik Eriksson" />
-
-<!-- Homepage CSS -->
-<link rel="stylesheet" href="/_css/screen.css" type="text/css" media="screen, projection" />
-
-<!-- Typekit -->
-<script type="text/javascript" src="http://use.typekit.com/jpd0pfm.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <!--[if lte IE 9]>
+    <script src="js/respond.min.js" type="text/javascript"</script>
+  <![endif]-->
 </head>
 <body>
-<!-- ClickTale Top part -->
-<script type="text/javascript">
-var WRInitTime=(new Date()).getTime();
-</script>
-<!-- ClickTale end of Top part -->
-<div class="site">
-<div class="title">
-<a href="/">Jens Erik Eriksson</a>
-<a class="extra" href="/">home</a>
+  
+  <div id="header">
+  <div class="inner-content">
+    <nav id="nav">
+      <a class="active" href="index.html">Home</a>
+      <a  href="sample-page.html">Sample page</a>
+      <a  href="blog.html">Blog</a>
+    </nav>
+    <div id="social">
+      <span>Follow us on:</span>
+      <a class="github" href="#">Github</a>
+      <a class="twitter" href="#">Twitter</a>
+    </div>
+  </div>
 </div>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div id="banner">
+  <div class="inner-content">
+    <div class="copy">
+      <h1>Cactus</h1>
+      <p class="intro">Cactus is a responsive Jekyll theme that is easy to customize. It provides a baseline design for Jekyll powered websites.</p>
+    </div>
+  </div>
+</div>
 
-<p>I'm a test </p>
+<div id="content">
+  <div class="inner-content">
+    <div class="cols">
+      <div class="col">
+        <h3>Features</h3>
+        <ul class="bordered-list">
+          <li>Made for static blogging with Jekyll</li>
+          <li>Easy theming with SCSS. Change a few variables and you've got your look</li>
+          <li>Using the wonderful open source font <a href="http://sourceforge.net/projects/sourcesans.adobe/">Source Sans Pro</a></li>
+          <li>Modern CSS using subtle transitions</li>
+          <li>Lightweight code (the CSS file is 18kb)</li>
+          <li>Responsive design with fluid grid and video</li>
+          <li>Code highlighting and image alignment classes for better looking blog posts</li>
+          <li>Drop in a Disqus code and you have comments</li>
+          <li>Photo banner on homepage, ready to customize</li>
+          <li>Built-in RSS feed</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Initial setup</h3>
+        <p>Download the files from the Github repository and put them in a folder. Make sure Jekyll, Susy, Compass and Sass are installed through <a href="http://rubygems.org/">RubyGems</a>:</p>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gem install jekyll
+sudo gem install susy
+sudo gem install sass
+sudo gem install compass</code></pre></div>
+
+        <h3>How to use</h3>
+        <p>Run two terminal windows, one to compile the site and one to compile the CSS. If you're just blogging you only need the jekyll command:</p>
+        <div class="highlight"><pre><code class="language-bash" data-lang="bash">jekyll serve -w
+compass watch</code></pre></div>
+        <h3>Theme license</h3>
+        <p>The Cactus Jekyll theme is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license i.e. do whatever you want with it. Keeping the backlink and spreading the word would be nice.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer id="footer">
+  <div class="inner-content">
+    <p class="first-child">© Name</p>
+    <p class="last-child">Theme by <a href="http://www.wolfslittlestore.be">Wolf's Little Store</a></p>
+  </div>
+</footer>
 
 
-<div class="footer">
-<div class="contact">
-
-</div>
-<div class="contact">
-<p>
-<a href="http://github.com/oftatkofta/">github.com/oftatkofta</a><br />
-<a href="http://twitter.com/erixoneriksson/">twitter.com/erixoneriksson</a><br />
-</p>
-</div>
-</div>
-</div>
+</body>
+</html>

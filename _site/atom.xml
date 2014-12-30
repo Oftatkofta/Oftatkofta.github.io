@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>My RSS feed</title>
+ <link href="http://mydomain.com/atom.xml" rel="self"/>
+ <link href="http://mydomain.com/"/>
+ <updated>2014-12-30T10:33:15+01:00</updated>
+ <id>http://mydomain.com/</id>
+ <author>
+   <name>Firstname Lastname</name>
+   <email>yourmail@domain.com</email>
+ </author>
+ 
+ <entry>
+   <title>A post with some code</title>
+   <link href="http://mydomain.com/2013/06/16/code-post.html"/>
+   <updated>2013-06-16T12:26:00+02:00</updated>
+   <id>http://mydomain.com/2013/06/16/code-post</id>
+   <content type="html">&lt;p&gt;Blog post with some code. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#333&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Dolor sit amet</title>
+   <link href="http://mydomain.com/2013/06/13/dolor-sit-amet.html"/>
+   <updated>2013-06-13T17:00:00+02:00</updated>
+   <id>http://mydomain.com/2013/06/13/dolor-sit-amet</id>
+   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.&lt;/li&gt;
+  &lt;li&gt;Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.&lt;/li&gt;
+  &lt;li&gt;Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.&lt;/li&gt;
+  &lt;li&gt;Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Intro video</title>
+   <link href="http://mydomain.com/2013/06/05/post-with-a-video.html"/>
+   <updated>2013-06-05T00:00:00+02:00</updated>
+   <id>http://mydomain.com/2013/06/05/post-with-a-video</id>
+   <content type="html">&lt;p&gt;Post with a video to demonstrate fluid videos.&lt;/p&gt;
+
+&lt;div class=&quot;video-wrapper&quot;&gt;
+  &lt;iframe width=&quot;600&quot; height=&quot;400&quot; frameborder=&quot;none&quot; src=&quot;http://www.youtube.com/embed/4aeETEoNfOg&quot; allowfullscreen=&quot;allowfullscreen=&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Lorem ipsum</title>
+   <link href="http://mydomain.com/2013/06/05/lorem-ipsum.html"/>
+   <updated>2013-06-05T00:00:00+02:00</updated>
+   <id>http://mydomain.com/2013/06/05/lorem-ipsum</id>
+   <content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>

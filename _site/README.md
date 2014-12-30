@@ -1,6 +1,3 @@
-Oftatkofta.github.io
-====================
+# Cactus Jekyll theme
 
-A personal home page for projects.
-
-*hmm*
+Cactus is a theme for Jekyll. Check out the <a href="http://wolfr.github.io/cactus-jekyll-theme/">demo</a>.
