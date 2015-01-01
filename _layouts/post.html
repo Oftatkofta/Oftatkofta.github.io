@@ -1,32 +1,50 @@
-{% include head.html %}
-<body>
-  
-  {% include header.html %}
+---
+layout: default
+---
 
-  <div class="page-title-bar">
-    <div class="inner-content">
-      <h2>Blog</h2>
-    </div>
-  </div>
-
-  <div id="blog">
-    <div id="blog-single">
-      <article>
-        <header>
-          <h1>{{ page.title }}</h1>
-          <p>Posted on {{ page.date | date: "%B %d, %Y" }} by Author</p>
-        </header>
-        <div class="entry-content">
-          {{ content }}
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">Posted by {{ page.author }} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                </div>
+            </div>
         </div>
-      </article>
- 
     </div>
-  </div>
-  
-  
-  {% include footer.html %}
+</header>
 
-</body>
-</html>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+				{{ content }}
+
+                <hr>
+
+                <ul class="pager">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
