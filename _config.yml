@@ -6,6 +6,7 @@ baseurl: ""
 twitter_username: erixoneriksson
 github_username:  oftatkofta
 youtube_username:  oftacoftaclassic
+flickr_username: oftakofta
 
 # Build settings
 markdown: kramdown
