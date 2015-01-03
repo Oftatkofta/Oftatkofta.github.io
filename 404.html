@@ -1,23 +1,36 @@
 ---
-  layout: default
-  title: 404
+permalink: /404.html
+404-img: "img/404.jpg"
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+<img scr="{{ site.baseurl }}/{{ page.404-img }}" alt="404">
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="error-template">
+            <div class="assshat">
                 <h1>
                     Oops!</h1>
                 <h2>
                     404 Not Found</h2>
-                <div class="error-details">
-                    Sorry, an error has occured, Requested page not found!
+                <div>
+                    Sorry, an error has occured, requested page not found!
                 </div>
-                <div class="error-actions">
-                    <a href="index.html" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
-                        Take Me Home </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+</body>
+
+</html>
+
+
