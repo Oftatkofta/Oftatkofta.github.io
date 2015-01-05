@@ -9,25 +9,19 @@ permalink: /404.html
 {% include head.html %}
 
 <body>
-
-<img scr="{{ site.baseurl }}/{{ page.404-img }}" alt="404">
-
+	
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="assshat">
-                <h1>
-                    Oops!</h1>
-                <h2>
-                    404 Not Found</h2>
-                <div>
-                    Sorry, an error has occured, requested page not found!
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="jumbotron text-center" id="404-jumbotron">
+		<h1><small>(p)</small>OOPS!</h1>
+		<img src="{{ site.baseurl }}/{{ page.404-img }}" class="img-circle displayed" alt=404/>
+		<h2>404 Not Found</h2>
+		<p>Sorry, an error has occured, requested page not found!</p>
+		<p><a class="btn btn-danger btn-lg" href="{{ site.baseurl }}/" role="button"> Back home <i class="fa fa-exclamation fa-spin"></i></a></p>
+	  
+	 </div>
 </div>
+
+{% include footer.html %}
 
 </body>
 
