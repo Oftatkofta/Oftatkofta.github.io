@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Teaching myself how to set up a modern blog"
-subtitle:   "Things have happened with web design since 1996"
+subtitle:   "Things have happened in web design since 1997"
 date: 2015-01-04
 author: "Jens Eriksson"
 category: blog
-tags: [poop, popp pie, seggs, jice]
+tags: [jekyll, web design, how-to, html, markdown]
 header-img: "img/2015-01-01-bg.jpg"
 ---
 
