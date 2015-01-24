@@ -651,7 +651,7 @@ Comment Posted by user RedDragon1260:
 
 Here is a better shot of the weaving on the PCI power cables.
 
-![]({{ site.baseurl }}/img/2015-01-21/11-7.jpg)
+![]({{ site.baseurl }}/img/2015-01-21/11_7.jpg)
 
 Now I'm looking for a linear potentiometer that I can connect to the voltage dial, so that I'll be able to control the CPU fan speed with it. Anyone that has any leads on where to get one. Size is an issue, as you see if you look at earlier posts.
 <span style="color: red">Guess what? Never happened, but I do have tons of suitable potentiometers nowadays. The dual meter PSU is still in my book shelf. I haven't done anything with it because it is still fully functional and I actually use it from time to time.</span>
