@@ -641,7 +641,10 @@ This picture shows VOLT in its natural habitat, with a portrait mode auxiliary d
 
 ![]({{ site.baseurl }}/img/2015-01-21/11-6.jpg)
 
-<span style="color: red"> I actually found these frames not to long ago and edited them in to a [trippy video](https://www.youtube.com/watch?v=xHBv90N9ULg).</span>
+<span style="color: red"> I actually found these frames not to long ago and edited them in to a [trippy video](https://www.youtube.com/watch?v=xHBv90N9ULg).
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=xHBv90N9ULg"></iframe>
+</div></span>
 
 
 
