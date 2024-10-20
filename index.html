@@ -1,38 +1,96 @@
----
-layout: page
-description: "A blog about where my curiosity takes me"
-header-img: img/home-bg.jpg
----
+<!DOCTYPE html>
+<html lang="en">
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excentrisk Konsult AB - Turning questions in to pictures, pictures in to numbers, numbers in to understanding </title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            color: #007bff;
+        }
+
+        .cta {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Excentrisk Konsult AB</h1>
+        <p>An Manufacturer Independent Microscopy Consultant.</p>
+    </header>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.
+            Whether you are working on biological research, materials science, or any field requiring precise imaging, I
+            am here to help you make sense of complex image data. I can also help with an independent technical evaluation of microscope procurement tenders.</p>
+
+        <h2>My Expertise</h2>
+        <ul>
+            <li>Microscopy Image Processing & Analysis</li>
+            <li>Custom Image Segmentation & Classification</li>
+            <li>Automated Data Extraction for Time-lapse Studies</li>
+            <li>Microscopy data management infrastructure</li>
+        </ul>
+
+        <div class="cta">
+            <a href="#contact">Get in Touch</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Excentrisk Konsult AB. All rights reserved.</p>
+        <p><a href="mailto:kontakt@excentrisk-konsult.se" style="color:#ddd;">Contact Us</a></p>
+    </footer>
+</body>
+
+</html>
+
