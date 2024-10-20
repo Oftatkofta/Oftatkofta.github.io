@@ -6,61 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excentrisk Konsult AB - Turning questions into pictures, pictures into numbers, numbers into understanding</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Resetting default margin and padding, setting font and layout properties for the body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Splitting the screen into two halves */
+        .split {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Styling the left and right sections of the split screen */
+        .left, .right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Black background for the left side */
+        .left {
+            background-color: black;
+        }
+
+        /* White background and black text for the right side */
+        .right {
+            background-color: white;
+            color: black;
+        }
+
+        /* Removing default margin for common elements to maintain consistent spacing */
+        h1, h2, p, ul, footer {
+            margin: 0;
+        }
+
+        /* Removing bullet points from the list and padding */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Styling the footer to be fixed at the bottom of the page */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #343a40;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Removing underlines and setting link color to inherit the parent color */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Styling the contact form to have a distinct light background with padding and rounded corners */
+        .contact-form {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Excentrisk Konsult AB</h1>
-        <p>A Manufacturer Independent Microscopy Consultant.</p>
-        <picture>
-            <source srcset="img/company_logo_large.png" media="(min-width: 800px)">
-            <source srcset="img/company_logo_small.png" media="(max-width: 799px)">
-            <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" style="max-width: 150px; height: auto; margin-top: 10px;">
-        </picture>
-    </header>
-
-    <div class="content">
-        <h2>About Us</h2>
-        <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.
-            Whether you are working on biological research, materials science, or any field requiring precise imaging, I
-            am here to help you make sense of complex image data. I can also assist with an independent technical evaluation of microscope procurement tenders.</p>
-
-        <h2>My Expertise</h2>
-        <ul>
-            <li>Microscopy Image Processing & Analysis</li>
-            <li>Custom Image Segmentation & Classification</li>
-            <li>Automated Data Extraction for Time-lapse Studies</li>
-            <li>Microscopy Data Management Infrastructure</li>
-        </ul>
-
-        <div class="cta">
-            <a href="#contact-form">Get in Touch</a>
+    <div class="split">
+        <!-- Left section of the split screen -->
+        <div class="left">
+            <div>
+                <h1>Excentrisk Konsult AB</h1>
+                <p>Turning questions into pictures, pictures into numbers, numbers into understanding.</p>
+            </div>
+        </div>
+        <!-- Right section of the split screen -->
+        <div class="right">
+            <div>
+                <h2>About Us</h2>
+                <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.</p>
+                <ul>
+                    <li>Microscopy Image Processing & Analysis</li>
+                    <li>Custom Image Segmentation & Classification</li>
+                    <li>Automated Data Extraction for Time-lapse Studies</li>
+                    <li>Microscopy Data Management Infrastructure</li>
+                </ul>
+                <!-- Contact form for users to get in touch -->
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
+                        <!-- Input for user's name -->
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <!-- Input for user's email -->
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <!-- Text area for user's message -->
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                        <!-- Submit button to send the form -->
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="contact-form" class="content">
-        <h2>Contact Us</h2>
-        <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <input type="submit" value="Send">
-        </form>
-    </div>
-
+    <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; <span id="current-year"></span> Excentrisk Konsult AB. All rights reserved.</p>
-        <p><a href="mailto:kontakt@excentrisk-konsult.se" style="color:#ddd;">Contact Us</a></p>
-        <div class="social-links">
-            <a href="https://github.com/oftatkofta" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/jens-eriksson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://www.instagram.com/erixoneriksson" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
+        <p><a href="mailto:kontakt@excentrisk-konsult.se">Contact Us</a></p>
     </footer>
 
+    <!-- JavaScript to automatically set the current year in the footer -->
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
