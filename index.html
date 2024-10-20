@@ -1,38 +1,69 @@
----
-layout: page
-description: "A blog about where my curiosity takes me"
-header-img: img/home-bg.jpg
----
+<!DOCTYPE html>
+<html lang="en">
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-    </a>
-    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
-</div>
-<hr>
-{% endfor %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excentrisk Konsult AB - Turning questions into pictures, pictures into numbers, numbers into understanding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+<body>
+    <header>
+        <h1>Excentrisk Konsult AB</h1>
+        <p>A Manufacturer Independent Microscopy Consultant.</p>
+        <picture>
+            <source srcset="img/company_logo_large.png" media="(min-width: 800px)">
+            <source srcset="img/company_logo_small.png" media="(max-width: 799px)">
+            <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" style="max-width: 150px; height: auto; margin-top: 10px;">
+        </picture>
+    </header>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.
+            Whether you are working on biological research, materials science, or any field requiring precise imaging, I
+            am here to help you make sense of complex image data. I can also assist with an independent technical evaluation of microscope procurement tenders.</p>
+
+        <h2>My Expertise</h2>
+        <ul>
+            <li>Microscopy Image Processing & Analysis</li>
+            <li>Custom Image Segmentation & Classification</li>
+            <li>Automated Data Extraction for Time-lapse Studies</li>
+            <li>Microscopy Data Management Infrastructure</li>
+        </ul>
+
+        <div class="cta">
+            <a href="#contact-form">Get in Touch</a>
+        </div>
+    </div>
+
+    <div id="contact-form" class="content">
+        <h2>Contact Us</h2>
+        <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Excentrisk Konsult AB. All rights reserved.</p>
+        <p><a href="mailto:kontakt@excentrisk-konsult.se" style="color:#ddd;">Contact Us</a></p>
+        <div class="social-links">
+            <a href="https://github.com/oftatkofta" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/jens-eriksson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/erixoneriksson" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

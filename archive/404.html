@@ -1,0 +1,30 @@
+---
+permalink: /404.html
+404-img: "img/404.jpg"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	
+<div class="container">
+	<div class="jumbotron text-center" id="404-jumbotron">
+		<h1><small>(p)</small>OOPS!</h1>
+		<img src="{{ site.baseurl }}/{{ page.404-img }}" class="img-circle displayed" alt=404/>
+		<h2>404 Not Found</h2>
+		<p>Sorry, an error has occured, requested page not found!</p>
+		<p><a class="btn btn-danger btn-lg" href="{{ site.baseurl }}/" role="button"> Back home <i class="fa fa-exclamation fa-spin"></i></a></p>
+	  
+	 </div>
+</div>
+
+{% include footer.html %}
+
+</body>
+
+</html>
+
+
