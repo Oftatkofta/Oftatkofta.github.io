@@ -25,6 +25,7 @@
             display: flex;
             height: 100%;
             width: 100%;
+            position: relative;
         }
 
         /* Styling the left and right sections of the split screen */
@@ -33,7 +34,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
             color: white;
         }
 
@@ -51,11 +51,11 @@
         /* Styling for the logo to position it centered and visible over both halves */
         .logo {
             position: absolute;
-            top: 10%;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            max-width: 150px;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            max-width: 200px;
             height: auto;
         }
 
