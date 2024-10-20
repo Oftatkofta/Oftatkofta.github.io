@@ -17,6 +17,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
 
         /* Splitting the screen into two halves */
@@ -24,7 +25,6 @@
             display: flex;
             height: 100%;
             width: 100%;
-            position: relative;
         }
 
         /* Styling the left and right sections of the split screen */
@@ -48,13 +48,13 @@
             color: black;
         }
 
-        /* Styling for the logo to position it centered and above both halves */
+        /* Styling for the logo to position it centered and visible over both halves */
         .logo {
             position: absolute;
-            top: 50%;
+            top: 10%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
+            transform: translateX(-50%);
+            z-index: 2;
             max-width: 150px;
             height: auto;
         }
