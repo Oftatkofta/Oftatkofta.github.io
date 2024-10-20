@@ -4,111 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excentrisk Konsult AB - Turning questions in to pictures, pictures in to numbers, numbers in to understanding </title>
+    <title>Excentrisk Konsult AB - Turning questions into pictures, pictures into numbers, numbers into understanding</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        .content h2 {
-            color: #007bff;
-        }
-
-        .cta {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .cta a {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #343a40;
-            color: #fff;
-            margin-top: 40px;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <h1>Excentrisk Konsult AB</h1>
         <p>A Manufacturer Independent Microscopy Consultant.</p>
+        <picture>
+            <source srcset="img/company_logo_large.png" media="(min-width: 800px)">
+            <source srcset="img/company_logo_small.png" media="(max-width: 799px)">
+            <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" style="max-width: 150px; height: auto; margin-top: 10px;">
+        </picture>
     </header>
 
     <div class="content">
         <h2>About Us</h2>
         <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.
             Whether you are working on biological research, materials science, or any field requiring precise imaging, I
-            am here to help you make sense of complex image data. I can also help with an independent technical evaluation of microscope procurement tenders.</p>
+            am here to help you make sense of complex image data. I can also assist with an independent technical evaluation of microscope procurement tenders.</p>
 
         <h2>My Expertise</h2>
         <ul>
             <li>Microscopy Image Processing & Analysis</li>
             <li>Custom Image Segmentation & Classification</li>
             <li>Automated Data Extraction for Time-lapse Studies</li>
-            <li>Microscopy data management infrastructure</li>
+            <li>Microscopy Data Management Infrastructure</li>
         </ul>
 
         <div class="cta">
-            <a href="#contact">Get in Touch</a>
+            <a href="#contact-form">Get in Touch</a>
         </div>
     </div>
 
+    <div id="contact-form" class="content">
+        <h2>Contact Us</h2>
+        <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Excentrisk Konsult AB. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Excentrisk Konsult AB. All rights reserved.</p>
         <p><a href="mailto:kontakt@excentrisk-konsult.se" style="color:#ddd;">Contact Us</a></p>
         <div class="social-links">
-            <a href="https://github.com/oftatkofta" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/jens-eriksson" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/erixoneriksson" target="_blank">Instagram</a>
+            <a href="https://github.com/oftatkofta" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/jens-eriksson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/erixoneriksson" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
