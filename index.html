@@ -6,129 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excentrisk Konsult AB - Turning questions into pictures, pictures into numbers, numbers into understanding</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Resetting default margin and padding, setting font and layout properties for the body */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Baskerville', Arial, sans-serif;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow-x: hidden; /* Prevents any potential overflow issues horizontally */
-        }
-
-        /* Splitting the screen into two halves */
-        .split {
-            display: flex;
-            min-height: 100vh;
-            width: 100%;
-            position: relative;
-            flex-direction: column;
-        }
-
-        @media (min-width: 768px) {
-            .split {
-                flex-direction: row;
-            }
-        }
-
-        /* Styling the left and right sections of the split screen */
-        .left, .right {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 40px; /* Adding more padding for better spacing on mobile */
-            box-sizing: border-box; /* Ensures padding does not affect width calculations */
-        }
-
-        /* Black background for the left side */
-        .left {
-            background-color: black;
-            z-index: 1;
-        }
-
-        /* White background and black text for the right side */
-        .right {
-            background-color: white;
-            color: black;
-            z-index: 1;
-        }
-
-        /* Styling for the logo to position it centered and visible over both halves */
-        .logo {
-            position: absolute;
-            top: 2rem; /* Adjusted value to ensure visibility without obscuring content */
-            left: 50%;
-            transform: translate(-50%, 0);
-            z-index: 100; /* Higher value to make sure it's above other elements */
-            width: 20vw;
-            max-width: 150px;
-            min-width: 80px;
-            height: auto;
-            padding: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow for better contrast */
-        }
-
-        /* Removing default margin for common elements to maintain consistent spacing */
-        h1, h2, p, ul, footer {
-            margin: 0;
-        }
-
-        /* Removing bullet points from the list and padding */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        /* Styling the footer to be fixed at the bottom of the page */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #343a40;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Removing underlines and setting link color to inherit the parent color */
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Styling the contact form to have a distinct light background with padding and rounded corners */
-        .contact-form {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Logo placed in the center, over both sections -->
-    <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" class="logo">
+    <!-- Logo placed in the center, over both sections using responsive image techniques -->
+    <picture>
+        <source srcset="img/company_logo_small.png" media="(max-width: 600px)">
+        <source srcset="img/company_logo_medium.png" media="(max-width: 1200px)">
+        <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" class="logo">
+    </picture>
 
     <div class="split">
         <!-- Left section of the split screen -->
         <div class="left">
             <div>
-                <h1>Excentrisk Konsult AB</h1>
+                <h1 style="margin-bottom: 20px;">Excentrisk Konsult AB</h1>
                 <p>Turning questions into pictures, pictures into numbers, numbers into understanding.</p>
             </div>
         </div>
         <!-- Right section of the split screen -->
         <div class="right">
             <div>
-                <h2>About Me</h2>
+                <h2 style="margin-bottom: 20px;">About Me</h2>
                 <p>I specialize in providing advanced solutions for microscopy image analysis.</p>
                 <ul>
                     <li>Microscopy Image Processing & Analysis</li>
@@ -141,18 +41,18 @@
                 <!-- Contact form for users to get in touch -->
                 <div class="contact-form">
                     <h2>Contact Me</h2>
-                    <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
+                    <form action="javascript:void(0);" onsubmit="sendMail()" method="post" enctype="text/plain" aria-labelledby="contact-heading" role="form">
                         <!-- Input for user's name -->
                         <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required><br><br>
+                        <input type="text" id="name" name="name" required aria-required="true" aria-label="Your full name"><br><br>
                         <!-- Input for user's email -->
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required><br><br>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-label="Your email address"><br><br>
                         <!-- Text area for user's message -->
                         <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                        <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Your message"></textarea><br><br>
                         <!-- Submit button to send the form -->
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Send" aria-label="Send your message">
                     </form>
                 </div>
             </div>
@@ -162,12 +62,39 @@
     <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; <span id="current-year"></span> Excentrisk Konsult AB. All rights reserved.</p>
-        <p><a href="mailto:kontakt@excentrisk-konsult.se">Contact Me</a></p>
+        <p id="contact-email"></p>
     </footer>
 
     <!-- JavaScript to automatically set the current year in the footer -->
     <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Obfuscate email to avoid spam
+            var emailName = 'kontakt';
+            var emailDomain = 'excentrisk-konsult.se';
+            var emailLink = 'mailto:' + emailName + '@' + emailDomain;
+            document.getElementById('contact-email').innerHTML = '<a href="' + emailLink + '">Contact Me</a>';
+        });
+
+        function sendMail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            var mailtoLink = 'mailto:kontakt@excentrisk-konsult.se' +
+                            '?subject=' + encodeURIComponent('Contact Form Submission from ' + name) +
+                            '&body=' + encodeURIComponent('Name: ' + name + '
+Email: ' + email + '
+Message: ' + message);
+            
+            window.location.href = mailtoLink;
+        }
     </script>
 </body>
 
