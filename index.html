@@ -36,6 +36,8 @@
             align-items: center;
             justify-content: center;
             color: white;
+            padding: 40px; /* Adding more padding for better spacing on mobile */
+            box-sizing: border-box; /* Ensures padding does not affect width calculations */
         }
 
         /* Black background for the left side */
@@ -54,13 +56,15 @@
         /* Styling for the logo to position it centered and visible over both halves */
         .logo {
             position: absolute;
-            top: 20%; /* Adjusted value to ensure visibility */
+            top: 10%; /* Adjusted value to ensure visibility */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -10%);
             z-index: 100; /* Higher value to make sure it's above other elements */
             max-width: 200px;
             height: auto;
             background-color: rgba(255, 255, 255, 0.7); /* Background for better visibility */
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow for better contrast */
         }
 
         /* Removing default margin for common elements to maintain consistent spacing */
