@@ -27,6 +27,13 @@
             height: 100%;
             width: 100%;
             position: relative;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .split {
+                flex-direction: row;
+            }
         }
 
         /* Styling the left and right sections of the split screen */
@@ -56,14 +63,13 @@
         /* Styling for the logo to position it centered and visible over both halves */
         .logo {
             position: absolute;
-            top: 10%; /* Adjusted value to ensure visibility */
+            top: 2%; /* Adjusted value to ensure visibility without obscuring content */
             left: 50%;
-            transform: translate(-50%, -10%);
+            transform: translate(-50%, 0);
             z-index: 100; /* Higher value to make sure it's above other elements */
-            max-width: 200px;
+            max-width: 120px;
             height: auto;
-            background-color: rgba(255, 255, 255, 0.7); /* Background for better visibility */
-            padding: 10px;
+            padding: 5px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow for better contrast */
         }
 
@@ -120,7 +126,7 @@
         <!-- Right section of the split screen -->
         <div class="right">
             <div>
-                <h2>About Me</h2>
+                <h2>About Us</h2>
                 <p>At Image Analysis Consulting, I specialize in providing advanced solutions for microscopy image analysis.</p>
                 <ul>
                     <li>Microscopy Image Processing & Analysis</li>
@@ -130,7 +136,7 @@
                 </ul>
                 <!-- Contact form for users to get in touch -->
                 <div class="contact-form">
-                    <h2>Contact Me</h2>
+                    <h2>Contact Us</h2>
                     <form action="mailto:kontakt@excentrisk-konsult.se" method="post" enctype="text/plain">
                         <!-- Input for user's name -->
                         <label for="name">Name:</label><br>
@@ -152,7 +158,7 @@
     <!-- Footer section with copyright information -->
     <footer>
         <p>&copy; <span id="current-year"></span> Excentrisk Konsult AB. All rights reserved.</p>
-        <p><a href="mailto:kontakt@excentrisk-konsult.se">Contact Me</a></p>
+        <p><a href="mailto:kontakt@excentrisk-konsult.se">Contact Us</a></p>
     </footer>
 
     <!-- JavaScript to automatically set the current year in the footer -->
