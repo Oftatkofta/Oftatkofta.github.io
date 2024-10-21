@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +19,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
-<body>
+<body style="position: relative; padding-top: 20vh;">
     <!-- Logo placed in the center, over both sections using responsive image techniques -->
     <picture>
         <source srcset="img/company_logo_small.png" media="(max-width: 600px)">
         <source srcset="img/company_logo_medium.png" media="(max-width: 1200px)">
-        <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" class="logo">
+        <img src="img/company_logo.png" alt="Excentrisk Konsult AB Logo" class="logo" style="max-height: 15vh;">
     </picture>
 
     <div class="split">
         <!-- Left section of the split screen -->
-        <div class="left">
+        <div class="left" style="padding-top: 10vh;">
             <div>
                 <h1 style="margin-bottom: 20px;">Excentrisk Konsult AB</h1>
                 <p>Turning questions into pictures, pictures into numbers, numbers into understanding.</p>
@@ -52,7 +51,7 @@
                 <!-- Contact form for users to get in touch -->
                 <div class="contact-form">
                     <h2>Contact Me</h2>
-                    <form action="javascript:void(0);" onsubmit="sendMail()" method="post" enctype="text/plain" aria-labelledby="contact-heading" role="form">
+                    <form id="contact-form" method="post" aria-labelledby="contact-heading" role="form">
                         <!-- Input for user's name -->
                         <label for="name">Name:</label><br>
                         <input type="text" id="name" name="name" required aria-required="true" aria-label="Your full name"><br><br>
@@ -63,7 +62,7 @@
                         <label for="message">Message:</label><br>
                         <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Your message"></textarea><br><br>
                         <!-- Submit button to send the form -->
-                        <input type="submit" value="Send" aria-label="Send your message">
+                        <button type="button" onclick="sendMail()" aria-label="Send your message">Send</button>
                     </form>
                 </div>
             </div>
@@ -76,12 +75,7 @@
         <p id="contact-email"></p>
     </footer>
 
-    <!-- JavaScript to automatically set the current year in the footer -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        });
-    </script>
+    <!-- JavaScript to automatically set the current year in the footer and handle contact form -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -98,11 +92,12 @@
             var email = document.getElementById('email').value;
             var message = document.getElementById('message').value;
             
-            var mailtoLink = 'mailto:kontakt@excentrisk-konsult.se' +
+            // Construct mailto link dynamically to avoid exposing the email directly
+            var emailName = 'kontakt';
+            var emailDomain = 'excentrisk-konsult.se';
+            var mailtoLink = 'mailto:' + emailName + '@' + emailDomain +
                             '?subject=' + encodeURIComponent('Contact Form Submission from ' + name) +
-                            '&body=' + encodeURIComponent('Name: ' + name + '
-Email: ' + email + '
-Message: ' + message);
+                            '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
             
             window.location.href = mailtoLink;
         }
